@@ -21,7 +21,7 @@ def main(n) :
 	##DEFINIR LA FUNCIÓN PRINCIPAL
 	def main(n):
 		if is_antiprime(n):
-			return "antiprime"
+			return "anti-prime"
 		else:
 			return "not anti-prime"
 
