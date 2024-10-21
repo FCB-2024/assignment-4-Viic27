@@ -7,24 +7,25 @@ def main(n) :
 	## DEFINIR FUNCION PARA CONTAR DIVISORES
 	def get_divisors_count(n):
 		count = 0
-		for i in range(1, n + 1):
+		i = 1
+		while i <= n:
 			if n % i == 0:
 				count += 1
-		return count 
-	## DEFINIR FUNCIÓN PARA DETERMINAR SI ES ANT-PRIME
+			i += 1
+		return count
 	def is_antiprime(n):
 		divisors_count = get_divisors_count(n)
-		for i in range(1, n):
+		i = 1
+		while i < n:
 			if get_divisors_count(i) >= divisors_count:
 				return False
+			i += 1
 		return True
-	##DEFINIR LA FUNCIÓN PRINCIPAL
 	def main(n):
 		if is_antiprime(n):
-			return "antiprime"
+			return "anti-prime"
 		else:
 			return "not anti-prime"
-
 	## THE LAST LINES OF YOUR CODE SHOULD EITHER
 	## RETURN THE VALUE "anti-prime" or "not anti-prime"
 	## REPLACE THE FOLLOWING LINE BY WHATEVER LINES
@@ -38,11 +39,9 @@ if __name__ == "__main__" :
 	if len(sys.argv) != 2:
 		print(f"error: {sys.argv[0]} <number>")
 	else:
-		try:
-			number = int(sys.argv[1])
-			print(main(number))
-		except ValueError:
-			print(f"error: {sys.argv[0]} <number>")
+		number = int(sys.argv[1])
+		print(main(number))
+			
 	## MODIFY THE LINE BELOW AND ADD BEFORE WHATEVER LINES ARE NECESSARY
 	## TO RUN THIS PROGRAM AS, FOR INSTANCE:
 	## $ python antiprime.py 6
