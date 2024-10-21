@@ -42,9 +42,8 @@ if __name__ == "__main__" :
 	if len(sys.argv) != 2:
 		print(f"error: {sys.argv[0]} <number>")
 	else:
-		try:
-			number = int(sys.argv[1])
-			print(main(number))
+		number = int(sys.argv[1])
+		print(main(number))
 	## MODIFY THE LINE BELOW AND ADD BEFORE WHATEVER LINES ARE NECESSARY
 	## TO RUN THIS PROGRAM AS, FOR INSTANCE:
 	## $ python antiprime.py 6
