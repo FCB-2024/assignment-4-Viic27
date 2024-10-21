@@ -5,37 +5,41 @@ def main(n):
 	## YOU CODE SHOULD START HERE AST THE SAME
 	## IDENTATION AS THIS COMMENT
 	## DEFINIR FUNCION PARA CONTAR DIVISORES
-	def get_divisors_count(n):
-		count = 0
-		i = 1
-		while i <= n:
-			if n % i == 0:
-				count += 1
-			i += 1
-		return count 
-	## DEFINIR FUNCIÓN PARA DETERMINAR SI ES ANT-PRIME
-	def is_antiprime(n):
-		if n == 1:
-			return True 
-		divisors_count = get_divisors_count(n)
-		i = 1
-		while i < n:
-			if get_divisors_count(i) >= divisors_count:
-				return False
-			i += 1
-		return True
-	##DEFINIR LA FUNCIÓN PRINCIPAL
-	def main(n):
-		if is_antiprime(n):
-			return "anti-prime"
-		else:
-			return "not anti-prime"
+	
 	## THE LAST LINES OF YOUR CODE SHOULD EITHER
 	## RETURN THE VALUE "anti-prime" or "not anti-prime"
 	## REPLACE THE FOLLOWING LINE BY WHATEVER LINES
 	## OF CODE ALLOW THIS FUNCTION TO RETURN THE VALUE
 	## "anti-prime" or "not anti-prime"
+import sys
+# Función para contar los divisores de un número
+def get_divisors_count(n):
+    count = 0
+    i = 1
+    while i <= n:
+        if n % i == 0:
+            count += 1
+        i += 1
+    return count
+# Función para verificar si un número es anti-prime
+def is_antiprime(n):
+    if n == 1:
+        return True  # El 1 es considerado "anti-prime"
+    
+    divisors_count = get_divisors_count(n)
+    i = 1
+    while i < n:
+        if get_divisors_count(i) >= divisors_count:
+            return False
+        i += 1
+    return True
 
+# Función principal que decide si un número es anti-prime
+def main(n):
+    if is_antiprime(n):
+        return "anti-prime"
+    else:
+        return "not anti-prime"
 ## DO NOT REMOVE THIS LINE BELOW
 if __name__ == "__main__" :
 	import sys
