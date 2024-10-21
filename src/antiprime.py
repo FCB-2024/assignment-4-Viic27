@@ -31,7 +31,7 @@ def main(n) :
 		else:
 			return "not anti-prime"
 		assert r == 'anti-prime'
-	       		AssertionError: assert 'None' == 'anti-prime'
+	       		assert 'None' == 'anti-prime'
 	## THE LAST LINES OF YOUR CODE SHOULD EITHER
 	## RETURN THE VALUE "anti-prime" or "not anti-prime"
 	## REPLACE THE FOLLOWING LINE BY WHATEVER LINES
