@@ -34,7 +34,6 @@ def main(n) :
 	## REPLACE THE FOLLOWING LINE BY WHATEVER LINES
 	## OF CODE ALLOW THIS FUNCTION TO RETURN THE VALUE
 	## "anti-prime" or "not anti-prime"
-	return("anti-prime")
 
 ## DO NOT REMOVE THIS LINE BELOW
 if __name__ == "__main__" :
