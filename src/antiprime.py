@@ -15,6 +15,8 @@ def main(n) :
 		return count 
 	## DEFINIR FUNCIÓN PARA DETERMINAR SI ES ANT-PRIME
 	def is_antiprime(n):
+		if n == 1:
+			return True 
 		divisors_count = get_divisors_count(n)
 		i = 1
 		while i < n:
