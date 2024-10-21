@@ -43,6 +43,7 @@ if __name__ == "__main__" :
 		print(f"error: {sys.argv[0]} <number>")
 	else:
 		number = int(sys.argv[1])
+		result = main(number)
 		print(main(number))
 	## MODIFY THE LINE BELOW AND ADD BEFORE WHATEVER LINES ARE NECESSARY
 	## TO RUN THIS PROGRAM AS, FOR INSTANCE:
